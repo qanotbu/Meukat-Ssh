@@ -4,11 +4,11 @@ DEBIAN 7 AUTO SCRIPT
 Script Debian7 For SSH
 
 Cara penggunaan :
-# wget https://github.com/radhsyn83/debian7/raw/master/debian7.sh
+# wget https://github.com/qanotbu/Meukat-Ssh/raw/master/debian7.sh
 # sh ./debian7.sh
 
 Tunggu sampai proses selesai.
-kurang lebih 1 jam tergantung jaringan anda
+kurang lebih 35 menit tergantung jaringan anda
 
 Autoscript Include:
 ===========================================
@@ -52,7 +52,4 @@ Fail2Ban : [on]
 
 IPv6     : [off]
 
-
-Script Modified by Fathur Radhy (www.fb.com/radhy.only)
-Credit to Yurissh OpenSource
-Thanks to Original Creator Kang Arie & Mikodemos
+www.filmsbioskop.top
