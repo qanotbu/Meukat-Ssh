@@ -1,0 +1,11 @@
+#!/bin/bash
+#Script auto create trial user SSH
+#yg akan expired setelah 1 hari
+Login="$1"
+mumetndase="30"
+Pass="$2"
+IP=`ifconfig venet0:0| awk 'NR==2 {print $2}'| awk -F: '{print $2}'`
+clear
+useradd -e `date -d "$mumetndase days" +"%Y-%m-%d"` -s /bin/false -M $Login
+echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
+echo -e "********************\n\nHost: $IP\nPort: 443\nUser: $Login\nPassword: $Pass\nExpired : `date -d "$mumetndase days" +"%d/%m/%Y"`\n\nTrimakasih sudah berlangganan\n\n\n********************\n\n"

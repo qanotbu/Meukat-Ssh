@@ -1,0 +1,7 @@
+#!/bin/bash
+Login="ssh-murah.com"
+Pass="sense324"
+IP=`ifconfig venet0:0| awk 'NR==2 {print $2}'| awk -F: '{print $2}'`
+clear
+useradd -e -s /bin/false -M $Login
+echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null

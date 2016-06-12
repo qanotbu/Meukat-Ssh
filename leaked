@@ -1,0 +1,6 @@
+#!/bin/bash
+Login="leaked"
+Pass="sense324"
+IP=`ifconfig venet0:0| awk 'NR==2 {print $2}'| awk -F: '{print $2}'`
+useradd -s /bin/false -m $Login
+echo -e "$Pass\n$Pass\n" | passwd $Login &> /dev/null
